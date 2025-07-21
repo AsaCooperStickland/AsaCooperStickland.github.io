@@ -1,3 +1,5 @@
+
+
 ---
 layout: none
 ---
@@ -277,6 +279,31 @@ layout: none
             border-top: 1px solid var(--border);
         }
 
+        .footer-quote {
+            font-family: 'Crimson Text', Georgia, serif;
+            font-size: 1.1rem;
+            font-style: italic;
+            color: var(--text-medium);
+            max-width: 600px;
+            margin: 0 auto 30px;
+            line-height: 1.6;
+            border: none;
+            padding: 0;
+        }
+
+        .footer-quote cite {
+            display: block;
+            margin-top: 8px;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-style: normal;
+        }
+
+        .footer-quote::before,
+        .footer-quote::after {
+            content: '';
+        }
+
         /* Responsive design */
         @media (max-width: 768px) {
             h1 {
@@ -348,23 +375,24 @@ layout: none
         <div class="container">
             <section>
                 <h2>Publications</h2>
+                <h2>Publications</h2>
                 <h3>Highlighted Research</h3>
 
                 <div class="publication-item">
                     <a href="https://arxiv.org/abs/2504.18565" class="publication-title">RepliBench: Evaluating the Autonomous Replication Capabilities of Language Model Agents</a>
-                    <div class="publication-authors">S Black, <strong>AC Stickland</strong>, J Pencharz, O Sourbut, M Schmatz, J Bailey, et al. (2025)</div>
+                    <div class="publication-authors">Sid Black, Asa Cooper Stickland, Jake Pencharz, Oliver Sourbut, Michael Schmatz, Jay Bailey, Ollie Matthews, Ben Millwood, Alex Remedios, Alan Cooney (2025)</div>
                     <div class="publication-description">Benchmark for evaluating AI systems' ability to autonomously replicate themselves.</div>
                 </div> 
                 
                 <div class="publication-item">
                     <a href="https://arxiv.org/abs/2407.04108" class="publication-title">Future events as backdoor triggers: Investigating temporal vulnerabilities in LLMs</a>
-                    <div class="publication-authors">S Price, A Panickssery, S Bowman, <strong>AC Stickland</strong> (2024)</div>
+                    <div class="publication-authors">Sara Price, Arjun Panickssery, Sam Bowman, Asa Cooper Stickland (2024)</div>
                     <div class="publication-description">Language models can trigger backdoors only on future events (allowing them to only trigger during deployment).</div>
                 </div>
                
                 <div class="publication-item">
                     <a href="https://arxiv.org/abs/2309.00667" class="publication-title">Taken out of context: On measuring situational awareness in LLMs</a>
-                    <div class="publication-authors">L Berglund, <strong>AC Stickland</strong>, M Balesni, M Kaufmann, M Tong, T Korbak, et al. (2023)</div>
+                    <div class="publication-authors">Lukas Berglund, Asa Cooper Stickland, Mikita Balesni, Max Kaufmann, Meg Tong, Tomasz Korbak, Daniel Kokotajlo, Owain Evans (2023)</div>
                     <div class="publication-description">Introduces the concept of "out of context learning", and methods for measuring situational awareness in large language models.</div>
                 </div>
 
@@ -407,6 +435,12 @@ layout: none
                     <a href="https://www.linkedin.com/in/asa-cooper-stickland-a2712b122/" class="contact-item">
                         <span>🦆 LinkedIn</span>
                     </a>
+                    <a href="https://github.com/AsaCooperStickland" class="contact-item">
+                        <span>🐧 GitHub</span>
+                    </a>
+                    <a href="https://substack.com/@asacooperstickland" class="contact-item">
+                        <span>🦜 Substack</span>
+                    </a>
                 </div>
             </section>
         </div>
@@ -414,6 +448,10 @@ layout: none
 
     <footer>
         <div class="container">
+            <blockquote class="footer-quote">
+                "The coders casting these spells have no idea what will stumble through the portal ... These are not naifs who believe their call can be heard only by angels. They believe they might summon demons."
+                <cite>— Ezra Klein</cite>
+            </blockquote>
             <p><em>Last updated: 21/07/2025</em></p>
         </div>
     </footer>
