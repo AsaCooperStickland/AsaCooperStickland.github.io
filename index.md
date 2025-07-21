@@ -14,19 +14,16 @@ Welcome to my homepage! I'm a research scientist at the UK AI Security Instittut
 
 **Taken out of context: On measuring situational awareness in LLMs** (2023)  
 *L Berglund, **AC Stickland**, M Balesni, M Kaufmann, M Tong, T Korbak, et al.*  
-arXiv preprint  
-**81 citations** | [[Paper](https://arxiv.org/abs/2309.00667)]  
+[[Paper](https://arxiv.org/abs/2309.00667)]  
 *Introduces the concept of "out of context learning", and methods for measuring situational awareness in large language models*
 
 **Future events as backdoor triggers: Investigating temporal vulnerabilities in LLMs** (2024)  
-*S Price, A Panickssery, S Bowman, **AC Stickland***  
-arXiv preprint  
-**9 citations** | [[Paper](https://arxiv.org/abs/2407.04108)]  
+*S Price, A Panickssery, S Bowman, **AC Stickland***    
+[[Paper](https://arxiv.org/abs/2407.04108)]  
 *Language models can trigger backdoors only on future events*
 
 **RepliBench: Evaluating the Autonomous Replication Capabilities of Language Model Agents** (2025)  
 *S Black, **AC Stickland**, J Pencharz, O Sourbut, M Schmatz, J Bailey, et al.*  
-arXiv preprint  
 [[Paper](https://arxiv.org/abs/2504.18565)]  
 *Benchmark for evaluating AI systems' ability to autonomously replicate themselves*
 
