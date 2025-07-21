@@ -10,31 +10,6 @@ Welcome to my homepage! I'm a research scientist at the UK AI Security Instittut
 
 ## Publications
 
-# Asa Cooper Stickland
-
-Welcome to my homepage! I'm a researcher working at the intersection of machine learning, natural language processing, and AI safety.
-
-## About Me
-
-I am passionate about developing AI systems that are both capable and aligned with human values. My research spans large language models, AI safety, and machine learning, with a focus on understanding model behavior, robustness, and potential risks. I work on everything from fundamental model architectures to critical safety evaluations of advanced AI systems.
-
-## Research Interests
-
-- AI Safety and Model Evaluation
-- Large Language Model Behavior and Robustness
-- Situational Awareness in AI Systems
-- Temporal Vulnerabilities and Backdoor Attacks
-- Machine Learning Adaptation and Transfer Learning
-- Natural Language Processing
-
-## Education
-
-- **Ph.D. in Computer Science** - [University Name] (Year)
-- **M.S. in Computer Science** - [University Name] (Year)  
-- **B.S. in Computer Science** - [University Name] (Year)
-
-## Publications
-
 ### Highlighted Research
 
 **Taken out of context: On measuring situational awareness in LLMs** (2023)  
