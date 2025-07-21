@@ -98,6 +98,22 @@
             transform: translateX(-50%) scaleX(1);
         }
 
+        .profile-image {
+            display: block;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 20px auto;
+            border: 3px solid var(--border);
+            transition: all 0.3s ease;
+        }
+
+        .profile-image:hover {
+            border-color: var(--accent-color);
+            transform: scale(1.05);
+        }
+
         .intro {
             font-size: 1.15rem;
             color: var(--text-medium);
@@ -369,6 +385,12 @@
                 transform: scaleX(1);
             }
 
+            .profile-image {
+                width: 150px;
+                height: 150px;
+                margin: 15px auto;
+            }
+
             header::after {
                 left: 0;
                 transform: scaleX(0);
@@ -414,6 +436,7 @@
     <header>
         <div class="container">
             <h1>Asa Cooper Stickland</h1>
+            <img src="asa2.jpeg" alt="Asa Cooper Stickland" class="profile-image">
             <p class="intro">
             I'm a research scientist at the <a href="https://www.aisi.gov.uk/" class="publication-link">UK AI Security Institute</a>, working on AI control and model organisms of misalignment. I was previously a postdoc with Sam Bowman at NYU, did MATS with Owain Evans, and mentored for the MATS, SPAR and Pivotal fellowships. I got my PhD at the University of Edinburgh, supervised by Iain Murray.
             </p>
