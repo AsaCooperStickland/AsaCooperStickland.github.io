@@ -354,10 +354,15 @@
         @media (max-width: 768px) {
             h1 {
                 font-size: 2.8rem;
+                text-align: center;
             }
 
             .intro {
                 font-size: 1.05rem;
+                text-align: left;
+            }
+
+            h1 {
                 text-align: left;
             }
 
@@ -366,40 +371,17 @@
                 text-align: left;
             }
 
+            /* Hide all header lines on mobile */
+            header::after,
+            h1::after,
             h2::after {
-                left: 0;
-                transform: scaleX(0);
-                transform-origin: left;
-            }
-
-            h2.animate-line::after {
-                transform: scaleX(1);
-            }
-
-            h1::after {
-                left: 0;
-                transform: scaleX(0);
-                transform-origin: left;
-            }
-
-            h1.animate-line::after {
-                transform: scaleX(1);
+                display: none !important;
             }
 
             .profile-image {
                 width: 150px;
                 height: 150px;
                 margin: 15px auto;
-            }
-
-            header::after {
-                left: 0;
-                transform: scaleX(0);
-                transform-origin: left;
-            }
-
-            header.animate-line::after {
-                transform: scaleX(1);
             }
 
             h3 {
@@ -412,6 +394,7 @@
 
             header {
                 padding: 40px 0 25px;
+                text-align: center;
             }
 
             main {
@@ -452,7 +435,7 @@
 
                 <div class="publication-item">
                     <a href="https://arxiv.org/abs/2504.18565" class="publication-title">RepliBench: Evaluating the Autonomous Replication Capabilities of Language Model Agents</a>
-                    <div class="publication-authors">Sid Black, Asa Cooper Stickland, Jake Pencharz, Oliver Sourbut, Michael Schmatz, Jay Bailey, Ollie Matthews, Ben Millwood, Alex Remedios, Alan Cooney (2025)</div>
+                    <div class="publication-authors">Sid Black*, Asa Cooper Stickland*, Jake Pencharz, Oliver Sourbut, Michael Schmatz, Jay Bailey, Ollie Matthews, Ben Millwood, Alex Remedios, Alan Cooney (2025)</div>
                     <div class="publication-description">Benchmark for evaluating AI systems' ability to autonomously replicate themselves.</div>
                 </div> 
                 
@@ -464,7 +447,7 @@
                
                 <div class="publication-item">
                     <a href="https://arxiv.org/abs/2309.00667" class="publication-title">Taken out of context: On measuring situational awareness in LLMs</a>
-                    <div class="publication-authors">Lukas Berglund, Asa Cooper Stickland, Mikita Balesni, Max Kaufmann, Meg Tong, Tomasz Korbak, Daniel Kokotajlo, Owain Evans (2023)</div>
+                    <div class="publication-authors">Lukas Berglund*, Asa Cooper Stickland*, Mikita Balesni*, Max Kaufmann*, Meg Tong*, Tomasz Korbak, Daniel Kokotajlo, Owain Evans (2023)</div>
                     <div class="publication-description">Introduces the concept of "out of context learning", and methods for measuring situational awareness in large language models.</div>
                 </div>
 
