@@ -493,7 +493,28 @@
     </footer>
 
     <script>
-        // Intersection Observer for scroll-triggered animations
+        // Auto-animate on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            // Trigger header animation first
+            setTimeout(() => {
+                document.querySelector('header').classList.add('animate-line');
+            }, 200);
+
+            // Trigger h1 animation
+            setTimeout(() => {
+                document.querySelector('h1').classList.add('animate-line');
+            }, 600);
+
+            // Trigger h2 animations in sequence
+            const h2Elements = document.querySelectorAll('h2');
+            h2Elements.forEach((h2, index) => {
+                setTimeout(() => {
+                    h2.classList.add('animate-line');
+                }, 1000 + (index * 400)); // Stagger each h2 by 400ms
+            });
+        });
+
+        // Keep scroll-based animations for when elements come into view later
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -20px 0px'
@@ -513,9 +534,8 @@
             });
         }, observerOptions);
 
-        // Observe all elements with lines for animations
+        // Observe elements that might be scrolled to
         document.addEventListener('DOMContentLoaded', () => {
-            // Observe header, h1, and h2 elements
             const elementsToObserve = [
                 document.querySelector('header'),
                 document.querySelector('h1'),
