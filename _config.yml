@@ -5,10 +5,20 @@
 # If you need help with YAML syntax, here are some quick references for you: 
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
-
-title: Asa's Blog
-description: 
+title: "Asa Cooper Stickland"
+description: "AI Safety Research Scientist at UK AI Security Institute"
+url: "https://asacooperstickland.github.io"
+author: "Asa Cooper Stickland"
+twitter:
+  username: AsaCoopStick
+social:
+  name: Asa Cooper Stickland
+  links:
+    - https://twitter.com/AsaCoopStick
+    - https://github.com/AsaCooperStickland
+    - https://scholar.google.com/citations?user=Ljqy-RMAAAAJ
 github_username: AsaCooperStickland
+
 
 # Email and twitter are optional:
 email: asacoopstick@gmail.com
