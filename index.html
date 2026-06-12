@@ -67,6 +67,15 @@
             box-sizing: border-box;
         }
 
+        ::selection {
+            background: var(--accent-light);
+            color: white;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
@@ -74,6 +83,14 @@
             background: var(--background);
             font-size: 17px;
             font-weight: 400;
+        }
+
+        h1, h2, h3 {
+            text-wrap: balance;
+        }
+
+        p, .publication-description, .intro {
+            text-wrap: pretty;
         }
 
         .container {
@@ -147,11 +164,13 @@
             object-fit: cover;
             margin: 20px auto;
             border: 3px solid var(--border);
-            transition: all 0.3s ease;
+            filter: grayscale(60%);
+            transition: all 0.4s ease;
         }
 
         .profile-image:hover {
             border-color: var(--accent-color);
+            filter: grayscale(0%);
             transform: scale(1.05);
         }
 
@@ -169,13 +188,13 @@
         .intro a {
             color: var(--accent-color);
             text-decoration: none;
-            border-bottom: 1px solid transparent;
-            transition: border-color 0.3s ease;
             font-weight: 500;
+            background: linear-gradient(var(--accent-color), var(--accent-color)) no-repeat 0 100% / 0% 1px;
+            transition: background-size 0.3s ease;
         }
 
         .intro a:hover {
-            border-bottom-color: var(--accent-color);
+            background-size: 100% 1px;
         }
 
         main {
@@ -218,14 +237,14 @@
         }
 
         h3 {
-            font-family: 'Crimson Text', Georgia, serif;
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: var(--text-dark);
+            font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--text-light);
             margin-bottom: 20px;
             text-align: center;
-            font-style: italic;
-            color: var(--text-medium);
         }
 
         .education-item, .publication-item {
@@ -235,12 +254,12 @@
             border-radius: 0px;
             border: none;
             border-top: 1px solid var(--border);
-            transition: all 0.2s ease;
+            transition: border-color 0.3s ease;
             position: relative;
         }
 
         .education-item:hover, .publication-item:hover {
-            background: rgba(124, 58, 237, 0.01);
+            border-top-color: var(--accent-light);
         }
 
         .publication-title {
@@ -388,6 +407,27 @@
 
         .scroll-animate.animate {
             opacity: 1;
+        }
+
+        /* Respect reduced-motion preferences */
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                transition: none !important;
+                animation: none !important;
+            }
+
+            header::after,
+            h1::after,
+            h2::after {
+                opacity: 1;
+                transform: translateX(-50%) scaleX(1);
+            }
         }
 
         /* Responsive design */
@@ -560,7 +600,7 @@
             });
         });
 
-        // Keep scroll-based animations for when elements come into view later
+        // Animate elements once when they first scroll into view
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -20px 0px'
@@ -573,9 +613,8 @@
                     setTimeout(() => {
                         entry.target.classList.add('animate-line');
                     }, 100);
-                } else {
-                    // Remove the class when element leaves the viewport
-                    entry.target.classList.remove('animate-line');
+                    // Animate once, then stop watching — no replay on re-scroll
+                    observer.unobserve(entry.target);
                 }
             });
         }, observerOptions);
