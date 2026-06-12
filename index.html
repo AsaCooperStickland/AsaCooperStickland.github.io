@@ -254,12 +254,13 @@
             border-radius: 0px;
             border: none;
             border-top: 1px solid var(--border);
-            transition: border-color 0.3s ease;
+            transition: border-color 0.3s ease, background-color 0.3s ease;
             position: relative;
         }
 
         .education-item:hover, .publication-item:hover {
             border-top-color: var(--accent-light);
+            background-color: rgba(124, 58, 237, 0.04);
         }
 
         .publication-title {
@@ -442,13 +443,8 @@
                 text-align: left;
             }
 
-            h1 {
-                text-align: left;
-            }
-
             h2 {
                 font-size: 1.8rem;
-                text-align: left;
             }
 
             /* Hide all header lines on mobile */
@@ -462,10 +458,6 @@
                 width: 150px;
                 height: 150px;
                 margin: 15px auto;
-            }
-
-            h3 {
-                text-align: left;
             }
 
             .container {
